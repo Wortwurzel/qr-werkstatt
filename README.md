@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/assets/screenshot-desktop.png" alt="QR-Werkstatt: links das Formular, rechts die Live-Vorschau des QR-Codes" width="900">
+  <img src="docs/assets/screenshot-desktop.jpeg" alt="QR-Werkstatt: links das Formular, rechts die Live-Vorschau des QR-Codes" width="900">
 </p>
 
 > **QR-Inhalte bleiben auf deinem Gerät.** Name, Logo, Website, Telefon, WhatsApp, E-Mail
