@@ -6,7 +6,7 @@
   "description": "Static QR code generator for contact, website, phone, WhatsApp, email and text.",
   "scripts": {
     "build": "node build.mjs",
-    "check": "node build.mjs && node check.mjs"
+    "check": "node build.mjs --no-analytics && node check.mjs"
   },
   "devDependencies": {
     "jsqr": "1.4.0",

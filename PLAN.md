@@ -12,8 +12,9 @@ Kein Impressum; eine kurze Datenschutznotiz ist eingebaut.
 
 - Bibliothek: `qr-code-styling@1.9.2` (vendort, 48 KB) – Logo-Mitte, Stile, PNG/SVG-Export.
 - Eine Quelle: `src/app.html`; `build.mjs` erzeugt `dist/index.html` und kopiert `vendor/`.
-- Hosting: Cloudflare Pages (kostenloser Direct Upload). Statistik: Cloudflare Web Analytics
-  (keine Cookies, Beacon wird von Pages automatisch eingefügt).
+- Hosting: Cloudflare Pages (kostenloser Direct Upload). Statistik: eigene
+  Cloudflare-Web-Analytics-Site für `qr.drwortwurzel.com` (keine Cookies); der Beacon wird
+  beim Build aus `CF_WEB_ANALYTICS_TOKEN` in `.env` eingefügt, nicht aus dem Repository.
 - Kein Artifact: Dort sind Downloads blockiert und es gibt keine Aufrufzahlen.
 - Keine Formulardaten an einen Server; gezählt werden nur Seitenaufrufe.
 - Schriften lokal in `vendor/fonts`; keine Google-Fonts-Anfrage.
@@ -36,7 +37,7 @@ Kein Impressum; eine kurze Datenschutznotiz ist eingebaut.
 - [x] GitHub-Repository `Wortwurzel/qr-werkstatt` veröffentlichen
 - [x] CNAME `qr` bei Namecheap auf `qr-werkstatt.pages.dev` setzen
 - [x] SSL-Zertifikat für `qr.drwortwurzel.com` abwarten und die Adresse prüfen
-- [ ] Web Analytics für die eigene Domain einrichten; 37er-Check gegen sie grün
+- [x] Web Analytics für die eigene Domain einrichten; 37er-Check gegen sie grün
 
 ## Prüfkommando
 
@@ -57,4 +58,5 @@ Erwartet: `CHECK OK` (aktuell 37 Prüfungen). Gegen eine kaputte Kopie:
 - Entwurfsänderungen wirken sofort; PNG und SVG lassen sich lokal herunterladen.
 - 390 px Breite ohne horizontales Scrollen; beide Themes lesbar.
 - Keine JavaScript-Fehler in der Konsole; keine Google-Fonts-Anfrage.
-- Öffentlich unter Cloudflare Pages; Web Analytics zählt Seitenaufrufe ohne Cookies.
+- Öffentlich unter `https://qr.drwortwurzel.com`; Web Analytics zählt Seitenaufrufe ohne
+  Cookies.

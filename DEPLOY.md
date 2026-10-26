@@ -1,11 +1,11 @@
 # Veröffentlichen mit Cloudflare Pages
 
 Stand: 2026-10-26. Veröffentlicht auf Cloudflare Pages unter
-`https://qr-werkstatt.pages.dev`; die eigene Adresse `https://qr.drwortwurzel.com` ist
-live (CNAME gesetzt, Zertifikat aktiv). Die Seite ist statisch: kein Server, keine
+`https://qr.drwortwurzel.com` (Hauptadresse); `https://qr-werkstatt.pages.dev` bleibt als
+Fallback. CNAME und Zertifikat sind aktiv. Die Seite ist statisch: kein Server, keine
 Datenbank. Gehostet wird kostenlos bei Cloudflare Pages; die Besucherzählung läuft über
-Cloudflare Web Analytics (ohne Cookies) und ist eingeschaltet. Ein Impressum ist nicht
-nötig, weil die Seite privat und nicht gewerblich ist.
+Cloudflare Web Analytics (ohne Cookies) und ist für die eigene Domain eingeschaltet. Ein
+Impressum ist nicht nötig, weil die Seite privat und nicht gewerblich ist.
 
 ## 1. Vorbereiten
 
@@ -18,6 +18,11 @@ npm run build
 `npm run check` muss `CHECK OK` sagen. Danach liegen `dist/index.html` und `dist/vendor/`
 bereit. Hochgeladen wird nur der Ordner `dist` – nicht `src`, `node_modules` oder
 `check.mjs`.
+
+Der Analytics-Beacon wird beim Build aus `CF_WEB_ANALYTICS_TOKEN` in `.env` eingebaut.
+`.env` ist gitignored und gehört nicht ins Repository. `npm run check` baut mit
+`--no-analytics`, weil Beacon-Anfragen von `file://` einen CORS-Fehler erzeugen; vor dem
+Upload daher immer noch einmal `npm run build` ausführen.
 
 ## 2. Cloudflare-Konto
 
@@ -41,9 +46,10 @@ das SSL-Zertifikat ist aktiv. Die Domain `drwortwurzel.com` bleibt bei Namecheap
 CNAME `qr` kommt dazu. Portfolio (`drwortwurzel.com`, `www`) und E-Mail-Weiterleitung
 bleiben unberührt.
 
-Cloudflare Web Analytics zählt derzeit nur `qr-werkstatt.pages.dev`. Für
-`qr.drwortwurzel.com` muss eine eigene Web Analytics-Site angelegt werden; sonst bleibt
-der Beacon auf der eigenen Domain mit einem CORS-Fehler stehen.
+Für `qr.drwortwurzel.com` gibt es eine eigene Web Analytics-Site. Der Beacon wird beim
+Build aus `CF_WEB_ANALYTICS_TOKEN` in `.env` eingebaut; der Token steht nicht im
+Repository. `qr-werkstatt.pages.dev` bleibt als Fallback erreichbar, wird aber nicht mehr
+gezählt.
 
 1. Bei Namecheap: **Domain List** → `drwortwurzel.com` → **Manage** → **Advanced DNS**
    → **Add New Record** → **CNAME Record**.
@@ -57,18 +63,32 @@ der Beacon auf der eigenen Domain mit einem CORS-Fehler stehen.
 Wichtig: Keine Nameserver bei Namecheap ändern. Die MX- und SPF-Einträge für die
 E-Mail-Weiterleitung bleiben, wie sie sind.
 
-## 5. Besucherstatistik einschalten
+## 5. Besucherstatistik
 
-1. Im Dashboard **Workers & Pages** → Projekt `qr-werkstatt` → **Metrics** öffnen.
-2. Unter **Web Analytics** auf **Enable** klicken.
-3. Cloudflare hängt das Zähl-Skript beim nächsten Deploy automatisch an die Seite. Einmal
-   neu deployen (Schritt 3 wiederholen oder den CLI-Befehl in Abschnitt 7 verwenden).
-4. Nach einigen Besuchen: **Web Analytics** im Dashboard öffnen. Dort stehen Seitenaufrufe
-   und Besucher. Werbe-Blocker können den Zähler blockieren; die Zahl ist eine Untergrenze.
+Die Statistik für `qr.drwortwurzel.com` läuft über eine eigene Cloudflare-Web-Analytics-Site.
+Der Beacon steckt im Build; `src/app.html` bleibt frei davon.
+
+1. Im Dashboard **Web Analytics** öffnen. Dort steht die Site `qr.drwortwurzel.com`.
+2. Den Site-Token in `.env` als `CF_WEB_ANALYTICS_TOKEN` eintragen (ohne Anführungszeichen).
+   Die Datei ist gitignored und wird nie committet.
+3. `npm run build` ausführen; der Beacon landet in `dist/index.html`. Danach `dist`
+   veröffentlichen (Abschnitt 3 oder 7).
+4. Nach einigen Besuchen erscheinen Seitenaufrufe und Besucher unter **Web Analytics**.
+   Daten brauchen einige Minuten. Werbe-Blocker können den Zähler blockieren; die Zahl ist
+   eine Untergrenze.
 
 Gezählt werden **Besuche der Website**, nicht Scans der mit dem Generator erstellten
 QR-Codes. Ein QR-Code enthält den Inhalt direkt und meldet keinen Scan an die Seite. Wer
 Scans zählen will, braucht einen vorgeschalteten Kurzlink als Inhalt des QR-Codes.
+
+Zum Prüfen der Live-Seite:
+
+```powershell
+$env:CHECK_TARGET = "https://qr.drwortwurzel.com"; npm run check
+```
+
+`npm run check` baut lokal ohne Beacon; für den Upload danach `npm run build` nicht
+vergessen.
 
 ## 6. Datenschutz und Impressum
 
@@ -91,7 +111,8 @@ Scans zählen will, braucht einen vorgeschalteten Kurzlink als Inhalt des QR-Cod
 ## 7. Später ändern
 
 1. `src/app.html` bearbeiten.
-2. `npm run build` und `npm run check`.
+2. `npm run check` (baut ohne Beacon) und danach `npm run build` (baut den Beacon aus
+   `.env` ein).
 3. Entweder im Cloudflare-Dashboard das Projekt öffnen → **Create new deployment** → den
    Ordner `dist` erneut hineinziehen, oder per CLI:
 
@@ -105,10 +126,14 @@ Scans zählen will, braucht einen vorgeschalteten Kurzlink als Inhalt des QR-Cod
 
 ## Was nur du machen kannst
 
-Der CNAME bei Namecheap ist gesetzt. Upload, Domain-Eintrag, SSL und die Live-Prüfung sind
-erledigt; die Seite läuft unter `https://qr-werkstatt.pages.dev` und
-`https://qr.drwortwurzel.com`. Offen ist nur die Web Analytics-Site für die eigene Domain;
-danach ist auch der 37er-Check dort grün.
+Der CNAME bei Namecheap, Upload, Domain, SSL und die Web Analytics-Site für die eigene
+Domain sind erledigt. Die Seite läuft unter `https://qr.drwortwurzel.com`; der 37er-Check
+ist dort grün. `qr-werkstatt.pages.dev` bleibt als Fallback erreichbar, ohne eigene
+Statistik.
+
+Der Cloudflare-API-Token für die Einrichtung liegt nur in `.env` (gitignored), nicht im
+Repository und nicht auf GitHub. Für den laufenden Betrieb wird er nicht gebraucht; er kann
+im Cloudflare-Dashboard unter **My Profile → API Tokens** gelöscht werden.
 
 Quellen (geprüft 2026-10-26):
 

@@ -23,10 +23,14 @@
 - CNAME `qr` → `qr-werkstatt.pages.dev` bei Namecheap gesetzt (TTL Automatic); die
   öffentlichen Resolver 1.1.1.1 und 8.8.8.8 sehen ihn. Bestehende A-, www- und SPF-Einträge
   blieben unverändert.
-- Custom Domain `qr.drwortwurzel.com` ist live: SSL-Zertifikat aktiv, Seite liefert
-  Titel und Datenschutz-Dialog. Der 37er-Check gegen die eigene Domain: 36/37; nur
-  Cloudflare Web Analytics verursacht dort einen CORS-Fehler. Die Statistik auf der
-  eigenen Domain ist offen.
+- Custom Domain `qr.drwortwurzel.com` ist live und Hauptadresse: SSL-Zertifikat aktiv,
+  Seite liefert Titel und Datenschutz-Dialog. Der 37er-Check gegen die eigene Domain ist
+  grün (37/37, keine CORS-Fehler).
+- Eigene Cloudflare-Web-Analytics-Site für `qr.drwortwurzel.com` angelegt. Der alte
+  Pages-Beacon für `qr-werkstatt.pages.dev` wurde entfernt; die Live-Seite enthält genau
+  einen Beacon für die neue Site. Der Site-Token liegt nur in `.env`
+  (`CF_WEB_ANALYTICS_TOKEN`, gitignored) und wird beim Build eingebaut. `npm run check`
+  baut mit `--no-analytics`, damit der lokale `file://`-Test keinen CORS-Fehler sieht.
 - GitHub-Repository öffentlich veröffentlicht: https://github.com/Wortwurzel/qr-werkstatt
   (Banner, Badges, Screenshots und README im ohmyzsh-Stil; Startseite verlinkt auf die
   Live-Seite).
@@ -38,14 +42,15 @@
 
 ## Nächster Schritt
 
-1. Web Analytics für `qr.drwortwurzel.com` einrichten (Site in Cloudflare Web Analytics)
-   und den 37er-Check gegen die eigene Domain wiederholen.
-2. Danach die Statistik beobachten.
+1. Statistik unter **Cloudflare → Web Analytics → `qr.drwortwurzel.com`** beobachten;
+   die ersten Seitenaufrufe können einige Minuten brauchen.
+2. Bei künftigen Änderungen: `npm run check`, danach `npm run build` (mit Beacon) und
+   `dist` veröffentlichen.
 
 ## Entscheidungen
 
-- Cloudflare Pages statt Artifact: kostenlos, Direct Upload, eingebaute Besucherstatistik.
-  Ein Artifact bietet keine Aufrufzahlen und blockiert Downloads.
+- Cloudflare Pages statt Artifact: kostenlos, Direct Upload, eigene Besucherstatistik über
+  Web Analytics. Ein Artifact bietet keine Aufrufzahlen und blockiert Downloads.
 - Eine Schrift: Archivo überall; keine zweite Schrift. Das hält die Seite ruhig und
   reduziert die Ladezeit.
 - Adresse `qr.drwortwurzel.com` per CNAME bei Namecheap. Das Portfolio (`drwortwurzel.com`,

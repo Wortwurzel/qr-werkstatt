@@ -5,11 +5,11 @@
 QR-Werkstatt is a static QR code generator. The QR processing runs entirely in the browser:
 contact (vCard), website, phone, WhatsApp, email and free text. There is no backend.
 The public version is live at https://qr.drwortwurzel.com (Cloudflare Pages); the
-deployment address https://qr-werkstatt.pages.dev remains as a fallback. Cloudflare Web
-Analytics currently recognizes qr-werkstatt.pages.dev only, so the custom-domain beacon has
-a CORS error (open). The portfolio stays on Netlify. It counts page views with Cloudflare
-Web Analytics (cookie-free, auto-injected by Pages). It is a private,
-non-commercial site; there is no Impressum, only the privacy dialog in the footer.
+deployment address https://qr-werkstatt.pages.dev remains as a fallback. The portfolio
+stays on Netlify. The custom domain has its own Cloudflare Web Analytics site; the beacon
+is added at build time from `CF_WEB_ANALYTICS_TOKEN` in `.env` (gitignored). The beacon is
+cookie-free and counts page views only, never form data. It is a private, non-commercial
+site; there is no Impressum, only the privacy dialog in the footer.
 
 ## Structure
 
@@ -17,6 +17,8 @@ non-commercial site; there is no Impressum, only the privacy dialog in the foote
   It is an Artifact fragment (no `<!doctype>`, `<html>`, `<head>` or `<body>`).
 - `build.mjs` — wraps the fragment into `dist/index.html` (adds doctype, head, meta and
   `data-local="true"`), copies the vendored library and `vendor/fonts/` into `dist/vendor/`.
+  It adds the Web Analytics beacon when `CF_WEB_ANALYTICS_TOKEN` is set in `.env`; the
+  `--no-analytics` flag skips it for local checks.
 - `vendor/qr-code-styling.js` — vendored `qr-code-styling@1.9.2` with the source line at
   the top. Do not edit it.
 - `vendor/fonts/` — local Archivo WOFF2, the only typeface; source and hash in
@@ -35,7 +37,7 @@ npm run check
 
 Expected console output: `CHECK OK`. The check must fail against a deliberately broken
 page: `CHECK_TARGET=<path> node check.mjs` must exit 1. To check the deployed page:
-`$env:CHECK_TARGET="https://qr-werkstatt.pages.dev"; node check.mjs`.
+`$env:CHECK_TARGET="https://qr.drwortwurzel.com"; npm run check`.
 
 ## Rules
 
@@ -48,6 +50,9 @@ page: `CHECK_TARGET=<path> node check.mjs` must exit 1. To check the deployed pa
 - No form data leaves the browser. In the public Cloudflare Pages deployment, only
   Cloudflare Web Analytics counts page views (no cookies, no IP-based identification).
   Keep the privacy dialog accurate: tool, purpose, Art. 6(1)(f) DSGVO, local fonts.
+- The analytics beacon is added by `build.mjs` from `CF_WEB_ANALYTICS_TOKEN` in `.env`.
+  Never put the token in `src/app.html`, docs or a commit; `.env` is gitignored.
+  `npm run check` uses `--no-analytics`; run `npm run build` before deploying.
 - Add an Impressum only if the site becomes commercial. `DEPLOY.md` has the details.
 - `localStorage` only holds theme and design preferences, never form content.
 - The page must work at 390 px width without horizontal scrolling and in both themes.

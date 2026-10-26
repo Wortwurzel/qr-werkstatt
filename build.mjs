@@ -4,6 +4,24 @@ import { fileURLToPath } from "node:url";
 
 const root = dirname(fileURLToPath(import.meta.url));
 const source = readFileSync(resolve(root, "src", "app.html"), "utf8");
+
+function readEnv(name) {
+  if (process.env[name]) return process.env[name].trim();
+  try {
+    const env = readFileSync(resolve(root, ".env"), "utf8");
+    return (env.match(new RegExp(`^${name}=(.*)$`, "m"))?.[1] || "").trim();
+  } catch {
+    return "";
+  }
+}
+
+const analyticsToken = readEnv("CF_WEB_ANALYTICS_TOKEN");
+if (analyticsToken && !/^[a-f0-9]{32}$/.test(analyticsToken)) {
+  throw new Error("CF_WEB_ANALYTICS_TOKEN is not a 32-character hex token");
+}
+// The deployed page gets the beacon; the local check builds without it because
+// beacon requests from file:// fail with CORS.
+const includeAnalytics = !process.argv.includes("--no-analytics");
 const marker = "<!-- APP -->";
 const splitAt = source.indexOf(marker);
 
@@ -14,7 +32,7 @@ if (splitAt === -1) {
 const head = source.slice(0, splitAt).trimEnd();
 const body = source.slice(splitAt + marker.length).trimStart();
 
-const html = `<!doctype html>
+let html = `<!doctype html>
 <html lang="de" data-local="true">
 <head>
 <meta charset="utf-8">
@@ -27,6 +45,11 @@ ${body}
 </body>
 </html>
 `;
+
+if (analyticsToken && includeAnalytics) {
+  const beacon = `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='${JSON.stringify({ token: analyticsToken })}'></script>`;
+  html = html.replace("</body>", `${beacon}\n</body>`);
+}
 
 const dist = resolve(root, "dist");
 mkdirSync(resolve(dist, "vendor"), { recursive: true });

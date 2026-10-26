@@ -194,7 +194,7 @@ Darstellung bei 390 px. Das vollständige Protokoll steht in `check.log`.
 Die veröffentlichte Seite prüfen:
 
 ```powershell
-$env:CHECK_TARGET = "https://qr-werkstatt.pages.dev"; npm run check
+$env:CHECK_TARGET = "https://qr.drwortwurzel.com"; npm run check
 ```
 
 Gegen eine absichtlich kaputte Kopie muss der Check mit Exit 1 enden:
@@ -203,10 +203,13 @@ Gegen eine absichtlich kaputte Kopie muss der Check mit Exit 1 enden:
 ## Veröffentlichen
 
 Die Seite läuft auf **Cloudflare Pages** und wird per Direct Upload veröffentlicht. Die
-Schritte stehen in [`DEPLOY.md`](DEPLOY.md). Die Besucherstatistik läuft über Cloudflare
-Web Analytics; der Beacon wird beim Deploy automatisch eingebaut. Der CNAME für
-`qr.drwortwurzel.com` ist gesetzt; die eigene Adresse ist live. Die Web-Analytics-Site
-für die eigene Domain ist noch offen.
+Schritte stehen in [`DEPLOY.md`](DEPLOY.md). Die Hauptadresse ist
+[`qr.drwortwurzel.com`](https://qr.drwortwurzel.com); `qr-werkstatt.pages.dev` bleibt als
+Fallback. Die Besucherstatistik läuft über eine eigene Cloudflare-Web-Analytics-Site für
+die eigene Domain. Der Beacon wird beim Build aus `CF_WEB_ANALYTICS_TOKEN` in `.env`
+eingebaut; die Datei ist gitignored. `npm run check` baut bewusst ohne Beacon, damit der
+lokale Test keine CORS-Fehler von `file://` sieht – vor dem Upload also `npm run build`
+ausführen.
 
 ## Beitragen
 
