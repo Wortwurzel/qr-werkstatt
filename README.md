@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://qr-werkstatt.pages.dev"><img alt="Live-Demo" src="https://img.shields.io/badge/Live-qr--werkstatt.pages.dev-0b8a5b?style=flat-square"></a>
+  <a href="https://qr.drwortwurzel.com"><img alt="Live-Demo" src="https://img.shields.io/badge/Live-qr.drwortwurzel.com-0b8a5b?style=flat-square"></a>
   <img alt="Kein Backend" src="https://img.shields.io/badge/Backend-keins-0b8a5b?style=flat-square">
   <img alt="37 Checks" src="https://img.shields.io/badge/Checks-37-0b8a5b?style=flat-square">
 </p>
@@ -83,7 +83,8 @@ npm run build
 Danach `dist/index.html` im Browser öffnen.
 
 > **Nur ausprobieren?** Die öffentliche Version läuft unter
-> [qr-werkstatt.pages.dev](https://qr-werkstatt.pages.dev).
+> [qr.drwortwurzel.com](https://qr.drwortwurzel.com). Die Cloudflare-Adresse
+> `qr-werkstatt.pages.dev` bleibt als Fallback erreichbar.
 
 ## Benutzung
 
