@@ -22,6 +22,9 @@
   Live-Seite geladen, ohne Seitenfehler. Gezählt werden Seitenaufrufe, keine QR-Scans.
 - Custom Domain `qr.drwortwurzel.com` per Cloudflare-API im Pages-Projekt eingetragen;
   wartet auf den CNAME bei Namecheap.
+- GitHub-Repository öffentlich veröffentlicht: https://github.com/Wortwurzel/qr-werkstatt
+  (Banner, Badges, Screenshots und README im ohmyzsh-Stil; Startseite verlinkt auf die
+  Live-Seite).
 - `check.mjs` akzeptiert jetzt auch URLs (`CHECK_TARGET=https://...`).
 - Cloudflare-Login per `wrangler`; Token im Windows-Schlüsseltresor, dafür
   `@napi-rs/keyring@1.3.0` global installiert.
@@ -33,8 +36,6 @@
 1. Bei Namecheap den CNAME `qr` → `qr-werkstatt.pages.dev` eintragen. Keine Nameserver
    ändern.
 2. `https://qr.drwortwurzel.com` prüfen und die Statistik beobachten.
-3. GitHub-Repository `Wortwurzel/qr-werkstatt` veröffentlichen (README, Banner,
-   Screenshots und Projektdateien).
 
 ## Entscheidungen
 
@@ -55,5 +56,3 @@
 
 - `@napi-rs/keyring@1.3.0` ist global installiert (nur für den Cloudflare-Login). Das
   personal-os-setup-Manifest führt keine npm-Globals; daher keine Spiegelung.
-- Das GitHub-Repository ist noch nicht veröffentlicht; die Vorbereitung (README,
-  `docs/assets/`) ist fertig.

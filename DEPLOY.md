@@ -4,8 +4,8 @@ Stand: 2026-10-26. Veröffentlicht auf Cloudflare Pages unter
 `https://qr-werkstatt.pages.dev`; die eigene Adresse `https://qr.drwortwurzel.com` wird
 per CNAME bei Namecheap noch verbunden. Die Seite ist statisch: kein Server, keine
 Datenbank. Gehostet wird kostenlos bei Cloudflare Pages; die Besucherzählung läuft über
-Cloudflare Web Analytics (ohne Cookies). Ein Impressum ist nicht nötig, weil die Seite
-privat und nicht gewerblich ist.
+Cloudflare Web Analytics (ohne Cookies) und ist eingeschaltet. Ein Impressum ist nicht
+nötig, weil die Seite privat und nicht gewerblich ist.
 
 ## 1. Vorbereiten
 
@@ -36,9 +36,9 @@ bereit. Hochgeladen wird nur der Ordner `dist` – nicht `src`, `node_modules` o
 
 ## 4. Eigene Adresse qr.drwortwurzel.com
 
-Die Domain ist im Cloudflare-Projekt bereits eingetragen (Status `initializing`). Die
-Domain `drwortwurzel.com` bleibt bei Namecheap; nur ein CNAME kommt dazu. Portfolio
-(`drwortwurzel.com`, `www`) und E-Mail-Weiterleitung bleiben unberührt.
+Die Domain ist im Cloudflare-Projekt bereits eingetragen (Status `pending`, der CNAME
+fehlt noch). Die Domain `drwortwurzel.com` bleibt bei Namecheap; nur ein CNAME kommt dazu.
+Portfolio (`drwortwurzel.com`, `www`) und E-Mail-Weiterleitung bleiben unberührt.
 
 1. Bei Namecheap: **Domain List** → `drwortwurzel.com` → **Manage** → **Advanced DNS**
    → **Add New Record** → **CNAME Record**.
@@ -100,9 +100,9 @@ Scans zählen will, braucht einen vorgeschalteten Kurzlink als Inhalt des QR-Cod
 
 ## Was nur du machen kannst
 
-DNS bei Namecheap und den Web-Analytics-Schalter im Dashboard: Das läuft in deinem
-Browser. Upload, Domain-Eintrag und Live-Prüfung sind erledigt; die Seite läuft unter
-`https://qr-werkstatt.pages.dev`. Sobald die eigene Adresse verbunden ist, prüfe ich sie.
+Der CNAME bei Namecheap läuft in deinem Browser. Upload, Domain-Eintrag, Web Analytics und
+die Live-Prüfung sind erledigt; die Seite läuft unter `https://qr-werkstatt.pages.dev`,
+der Beacon ist aktiv. Sobald die eigene Adresse verbunden ist, prüfe ich sie.
 
 Quellen (geprüft 2026-10-26):
 

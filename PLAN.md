@@ -33,7 +33,7 @@ Kein Impressum; eine kurze Datenschutznotiz ist eingebaut.
 - [x] Cloudflare Pages hochladen; live unter https://qr-werkstatt.pages.dev
 - [x] Web Analytics einschalten; Beacon auf der Live-Seite geprüft
 - [x] `PROGRESS.md` schreiben
-- [ ] GitHub-Repository `Wortwurzel/qr-werkstatt` veröffentlichen
+- [x] GitHub-Repository `Wortwurzel/qr-werkstatt` veröffentlichen
 - [ ] CNAME `qr` bei Namecheap auf `qr-werkstatt.pages.dev` setzen (du)
 
 ## Prüfkommando
