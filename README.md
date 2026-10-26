@@ -204,7 +204,8 @@ Gegen eine absichtlich kaputte Kopie muss der Check mit Exit 1 enden:
 Die Seite läuft auf **Cloudflare Pages** und wird per Direct Upload veröffentlicht. Die
 Schritte stehen in [`DEPLOY.md`](DEPLOY.md). Die Besucherstatistik läuft über Cloudflare
 Web Analytics; der Beacon wird beim Deploy automatisch eingebaut. Der CNAME für
-`qr.drwortwurzel.com` ist gesetzt; Cloudflare stellt das Zertifikat noch aus.
+`qr.drwortwurzel.com` ist gesetzt; die eigene Adresse ist live. Die Web-Analytics-Site
+für die eigene Domain ist noch offen.
 
 ## Beitragen
 

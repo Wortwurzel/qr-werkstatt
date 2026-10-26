@@ -23,8 +23,10 @@
 - CNAME `qr` → `qr-werkstatt.pages.dev` bei Namecheap gesetzt (TTL Automatic); die
   öffentlichen Resolver 1.1.1.1 und 8.8.8.8 sehen ihn. Bestehende A-, www- und SPF-Einträge
   blieben unverändert.
-- Custom Domain `qr.drwortwurzel.com` im Pages-Projekt eingetragen; Cloudflare stellt das
-  SSL-Zertifikat noch aus (Status `pending`).
+- Custom Domain `qr.drwortwurzel.com` ist live: SSL-Zertifikat aktiv, Seite liefert
+  Titel und Datenschutz-Dialog. Der 37er-Check gegen die eigene Domain: 36/37; nur
+  Cloudflare Web Analytics verursacht dort einen CORS-Fehler. Die Statistik auf der
+  eigenen Domain ist offen.
 - GitHub-Repository öffentlich veröffentlicht: https://github.com/Wortwurzel/qr-werkstatt
   (Banner, Badges, Screenshots und README im ohmyzsh-Stil; Startseite verlinkt auf die
   Live-Seite).
@@ -36,9 +38,9 @@
 
 ## Nächster Schritt
 
-1. Warten, bis Cloudflare das SSL-Zertifikat für `qr.drwortwurzel.com` ausstellt
-   (Status im Pages-Projekt: `pending`).
-2. Danach `https://qr.drwortwurzel.com` prüfen und die Statistik beobachten.
+1. Web Analytics für `qr.drwortwurzel.com` einrichten (Site in Cloudflare Web Analytics)
+   und den 37er-Check gegen die eigene Domain wiederholen.
+2. Danach die Statistik beobachten.
 
 ## Entscheidungen
 

@@ -1,9 +1,9 @@
 # Veröffentlichen mit Cloudflare Pages
 
 Stand: 2026-10-26. Veröffentlicht auf Cloudflare Pages unter
-`https://qr-werkstatt.pages.dev`; für die eigene Adresse `https://qr.drwortwurzel.com`
-ist der CNAME bei Namecheap gesetzt, Cloudflare stellt das Zertifikat noch aus. Die Seite
-ist statisch: kein Server, keine Datenbank. Gehostet wird kostenlos bei Cloudflare Pages; die Besucherzählung läuft über
+`https://qr-werkstatt.pages.dev`; die eigene Adresse `https://qr.drwortwurzel.com` ist
+live (CNAME gesetzt, Zertifikat aktiv). Die Seite ist statisch: kein Server, keine
+Datenbank. Gehostet wird kostenlos bei Cloudflare Pages; die Besucherzählung läuft über
 Cloudflare Web Analytics (ohne Cookies) und ist eingeschaltet. Ein Impressum ist nicht
 nötig, weil die Seite privat und nicht gewerblich ist.
 
@@ -36,10 +36,14 @@ bereit. Hochgeladen wird nur der Ordner `dist` – nicht `src`, `node_modules` o
 
 ## 4. Eigene Adresse qr.drwortwurzel.com
 
-Die Domain ist im Cloudflare-Projekt eingetragen und der CNAME bei Namecheap ist gesetzt.
-Cloudflare prüft ihn und stellt das SSL-Zertifikat aus; der Status steht noch auf `pending`.
-Die Domain `drwortwurzel.com` bleibt bei Namecheap; nur der CNAME `qr` kommt dazu.
-Portfolio (`drwortwurzel.com`, `www`) und E-Mail-Weiterleitung bleiben unberührt.
+Die Domain ist im Cloudflare-Projekt eingetragen, der CNAME bei Namecheap ist gesetzt und
+das SSL-Zertifikat ist aktiv. Die Domain `drwortwurzel.com` bleibt bei Namecheap; nur der
+CNAME `qr` kommt dazu. Portfolio (`drwortwurzel.com`, `www`) und E-Mail-Weiterleitung
+bleiben unberührt.
+
+Cloudflare Web Analytics zählt derzeit nur `qr-werkstatt.pages.dev`. Für
+`qr.drwortwurzel.com` muss eine eigene Web Analytics-Site angelegt werden; sonst bleibt
+der Beacon auf der eigenen Domain mit einem CORS-Fehler stehen.
 
 1. Bei Namecheap: **Domain List** → `drwortwurzel.com` → **Manage** → **Advanced DNS**
    → **Add New Record** → **CNAME Record**.
@@ -101,10 +105,10 @@ Scans zählen will, braucht einen vorgeschalteten Kurzlink als Inhalt des QR-Cod
 
 ## Was nur du machen kannst
 
-Der CNAME bei Namecheap ist gesetzt. Upload, Domain-Eintrag, Web Analytics und die
-Live-Prüfung sind erledigt; die Seite läuft unter `https://qr-werkstatt.pages.dev`, der
-Beacon ist aktiv. Sobald Cloudflare das Zertifikat ausgestellt hat, prüfe ich
-`https://qr.drwortwurzel.com`.
+Der CNAME bei Namecheap ist gesetzt. Upload, Domain-Eintrag, SSL und die Live-Prüfung sind
+erledigt; die Seite läuft unter `https://qr-werkstatt.pages.dev` und
+`https://qr.drwortwurzel.com`. Offen ist nur die Web Analytics-Site für die eigene Domain;
+danach ist auch der 37er-Check dort grün.
 
 Quellen (geprüft 2026-10-26):
 

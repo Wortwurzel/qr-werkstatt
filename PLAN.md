@@ -35,7 +35,8 @@ Kein Impressum; eine kurze Datenschutznotiz ist eingebaut.
 - [x] `PROGRESS.md` schreiben
 - [x] GitHub-Repository `Wortwurzel/qr-werkstatt` veröffentlichen
 - [x] CNAME `qr` bei Namecheap auf `qr-werkstatt.pages.dev` setzen
-- [ ] SSL-Zertifikat für `qr.drwortwurzel.com` abwarten und die Adresse prüfen
+- [x] SSL-Zertifikat für `qr.drwortwurzel.com` abwarten und die Adresse prüfen
+- [ ] Web Analytics für die eigene Domain einrichten; 37er-Check gegen sie grün
 
 ## Prüfkommando
 
