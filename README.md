@@ -127,7 +127,9 @@ scannbar bleiben.
 - **Beide Themes:** Die Seite folgt dem System und lässt sich hell oder dunkel umschalten.
 
 <p align="center">
-  <img src="docs/assets/screenshot-mobile.png" alt="QR-Werkstatt auf dem Handy bei 390 px Breite" width="280">
+  <a href="docs/assets/screenshot-mobile-phone.png">
+    <img src="docs/assets/screenshot-mobile-phone.png" alt="QR-Werkstatt auf einem Smartphone in der Hand; die Seite zeigt die Live-Vorschau eines QR-Codes" width="520">
+  </a>
 </p>
 
 ## Datenschutz

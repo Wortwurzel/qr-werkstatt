@@ -34,6 +34,9 @@
 - GitHub-Repository öffentlich veröffentlicht: https://github.com/Wortwurzel/qr-werkstatt
   (Banner, Badges, Screenshots und README im ohmyzsh-Stil; Startseite verlinkt auf die
   Live-Seite).
+- Mobile-README-Bild durch ein freigestelltes Handy-Mockup ersetzt
+  (`docs/assets/screenshot-mobile-phone.png`, transparenter Hintergrund, Screenshot im
+  Bildschirm).
 - `check.mjs` akzeptiert jetzt auch URLs (`CHECK_TARGET=https://...`).
 - Cloudflare-Login per `wrangler`; Token im Windows-Schlüsseltresor, dafür
   `@napi-rs/keyring@1.3.0` global installiert.
