@@ -119,7 +119,7 @@ scannbar bleiben.
 
 - **Fehlerkorrektur:** Q ohne Logo, H mit Logo. Je mehr Logo, desto mehr Redundanz.
 - **Ruhezone:** mindestens vier Module ringsum, dynamisch aus der Modulzahl berechnet.
-- **Kontrast:** Die Vorschau warnt bei zu wenig Kontrast oder invertierten Codes.
+- **Kontrast:** Die Vorschau warnt bei zu wenig Kontrast oder hellem Muster auf dunklem Grund.
 - **Eine Schrift:** Archivo trägt die ganze Seite – Überschrift, Formular, Labels und
   Zahlen. Keine zweite Schrift, keine Google-Fonts-Anfrage.
 - **PNG und SVG:** PNG für Chat und Alltag, SVG für Druck und Weiterverarbeitung.
