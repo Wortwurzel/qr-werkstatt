@@ -128,7 +128,7 @@ scannbar bleiben.
 
 <p align="center">
   <a href="docs/assets/screenshot-mobile-phone.png">
-    <img src="docs/assets/screenshot-mobile-phone.png" alt="QR-Werkstatt auf einem Smartphone in der Hand; die Seite zeigt die Live-Vorschau eines QR-Codes" width="520">
+    <img src="docs/assets/screenshot-mobile-phone.png" alt="QR-Werkstatt auf einem Smartphone in der Hand; die Seite zeigt die Live-Vorschau eines QR-Codes" width="560">
   </a>
 </p>
 
