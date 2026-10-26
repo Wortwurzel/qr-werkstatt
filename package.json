@@ -1,0 +1,15 @@
+{
+  "name": "qr-werkstatt",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static QR code generator for contact, website, phone, WhatsApp, email and text.",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node build.mjs && node check.mjs"
+  },
+  "devDependencies": {
+    "jsqr": "1.4.0",
+    "playwright": "1.61.1"
+  }
+}

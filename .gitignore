@@ -1,0 +1,11 @@
+node_modules/
+dist/
+check.log
+.netlify/
+.wrangler/
+.env
+.env.*
+*.key
+*.pem
+Thumbs.db
+.DS_Store

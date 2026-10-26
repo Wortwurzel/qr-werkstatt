@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="bannerTitle bannerDesc">
+  <title id="bannerTitle">QR-Werkstatt – Ein Code für alles, was du teilen willst.</title>
+  <desc id="bannerDesc">Dunkelgrüner Banner mit QR-Symbol, Produktname und dem Untertitel: Ein Code für alles, was du teilen willst.</desc>
+  <defs>
+    <pattern id="bannerDots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.1" fill="#3ddc97" opacity="0.13"/>
+    </pattern>
+    <radialGradient id="bannerGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3ddc97" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#3ddc97" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="320" rx="24" fill="#0b1f17"/>
+  <rect width="1200" height="320" rx="24" fill="url(#bannerDots)"/>
+  <circle cx="1040" cy="90" r="230" fill="url(#bannerGlow)"/>
+
+  <g opacity="0.10" fill="none" stroke="#3ddc97" stroke-width="10">
+    <rect x="970" y="48" width="160" height="160" rx="26"/>
+    <rect x="1014" y="92" width="72" height="72" rx="12"/>
+  </g>
+  <rect x="1040" y="118" width="20" height="20" rx="4" fill="#3ddc97" opacity="0.10"/>
+
+  <g transform="translate(80 92)">
+    <rect width="136" height="136" rx="28" fill="#121a15" stroke="#26332b" stroke-width="2"/>
+    <g transform="translate(20 20) scale(3)" fill="none" stroke="#eaf2ec" stroke-width="2.5">
+      <rect x="2" y="2" width="12" height="12" rx="2"/>
+      <rect x="6.5" y="6.5" width="3" height="3" fill="#eaf2ec" stroke="none"/>
+      <rect x="18" y="2" width="12" height="12" rx="2"/>
+      <rect x="22.5" y="6.5" width="3" height="3" fill="#eaf2ec" stroke="none"/>
+      <rect x="2" y="18" width="12" height="12" rx="2"/>
+      <rect x="6.5" y="22.5" width="3" height="3" fill="#eaf2ec" stroke="none"/>
+      <rect x="18" y="18" width="5" height="5" rx="1" fill="#3ddc97" stroke="none"/>
+      <rect x="25" y="25" width="5" height="5" rx="1" fill="#3ddc97" stroke="none"/>
+      <rect x="18" y="25" width="5" height="5" rx="1" fill="#eaf2ec" stroke="none"/>
+    </g>
+  </g>
+
+  <text x="252" y="150" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="64" font-weight="800" fill="#eaf2ec" letter-spacing="-1.5">QR-Werkstatt</text>
+  <text x="254" y="200" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="26" fill="#a9c3b4">Ein Code für alles, was du teilen willst.</text>
+  <rect x="254" y="224" width="72" height="3" rx="1.5" fill="#3ddc97"/>
+  <text x="254" y="258" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" letter-spacing="3" fill="#3ddc97">BROWSER-ONLY · KEIN BACKEND · KEINE UPLOADS</text>
+</svg>
