@@ -34,7 +34,8 @@ Kein Impressum; eine kurze Datenschutznotiz ist eingebaut.
 - [x] Web Analytics einschalten; Beacon auf der Live-Seite geprüft
 - [x] `PROGRESS.md` schreiben
 - [x] GitHub-Repository `Wortwurzel/qr-werkstatt` veröffentlichen
-- [ ] CNAME `qr` bei Namecheap auf `qr-werkstatt.pages.dev` setzen (du)
+- [x] CNAME `qr` bei Namecheap auf `qr-werkstatt.pages.dev` setzen
+- [ ] SSL-Zertifikat für `qr.drwortwurzel.com` abwarten und die Adresse prüfen
 
 ## Prüfkommando
 

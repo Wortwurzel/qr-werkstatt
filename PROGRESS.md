@@ -20,8 +20,11 @@
   https://qr-werkstatt.pages.dev. 37 Live-Prüfungen gegen die veröffentlichte Seite grün.
 - Cloudflare Web Analytics eingeschaltet; der Beacon (`cloudflareinsights`) wird auf der
   Live-Seite geladen, ohne Seitenfehler. Gezählt werden Seitenaufrufe, keine QR-Scans.
-- Custom Domain `qr.drwortwurzel.com` per Cloudflare-API im Pages-Projekt eingetragen;
-  wartet auf den CNAME bei Namecheap.
+- CNAME `qr` → `qr-werkstatt.pages.dev` bei Namecheap gesetzt (TTL Automatic); die
+  öffentlichen Resolver 1.1.1.1 und 8.8.8.8 sehen ihn. Bestehende A-, www- und SPF-Einträge
+  blieben unverändert.
+- Custom Domain `qr.drwortwurzel.com` im Pages-Projekt eingetragen; Cloudflare stellt das
+  SSL-Zertifikat noch aus (Status `pending`).
 - GitHub-Repository öffentlich veröffentlicht: https://github.com/Wortwurzel/qr-werkstatt
   (Banner, Badges, Screenshots und README im ohmyzsh-Stil; Startseite verlinkt auf die
   Live-Seite).
@@ -33,9 +36,9 @@
 
 ## Nächster Schritt
 
-1. Bei Namecheap den CNAME `qr` → `qr-werkstatt.pages.dev` eintragen. Keine Nameserver
-   ändern.
-2. `https://qr.drwortwurzel.com` prüfen und die Statistik beobachten.
+1. Warten, bis Cloudflare das SSL-Zertifikat für `qr.drwortwurzel.com` ausstellt
+   (Status im Pages-Projekt: `pending`).
+2. Danach `https://qr.drwortwurzel.com` prüfen und die Statistik beobachten.
 
 ## Entscheidungen
 

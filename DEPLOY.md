@@ -1,9 +1,9 @@
 # Veröffentlichen mit Cloudflare Pages
 
 Stand: 2026-10-26. Veröffentlicht auf Cloudflare Pages unter
-`https://qr-werkstatt.pages.dev`; die eigene Adresse `https://qr.drwortwurzel.com` wird
-per CNAME bei Namecheap noch verbunden. Die Seite ist statisch: kein Server, keine
-Datenbank. Gehostet wird kostenlos bei Cloudflare Pages; die Besucherzählung läuft über
+`https://qr-werkstatt.pages.dev`; für die eigene Adresse `https://qr.drwortwurzel.com`
+ist der CNAME bei Namecheap gesetzt, Cloudflare stellt das Zertifikat noch aus. Die Seite
+ist statisch: kein Server, keine Datenbank. Gehostet wird kostenlos bei Cloudflare Pages; die Besucherzählung läuft über
 Cloudflare Web Analytics (ohne Cookies) und ist eingeschaltet. Ein Impressum ist nicht
 nötig, weil die Seite privat und nicht gewerblich ist.
 
@@ -36,8 +36,9 @@ bereit. Hochgeladen wird nur der Ordner `dist` – nicht `src`, `node_modules` o
 
 ## 4. Eigene Adresse qr.drwortwurzel.com
 
-Die Domain ist im Cloudflare-Projekt bereits eingetragen (Status `pending`, der CNAME
-fehlt noch). Die Domain `drwortwurzel.com` bleibt bei Namecheap; nur ein CNAME kommt dazu.
+Die Domain ist im Cloudflare-Projekt eingetragen und der CNAME bei Namecheap ist gesetzt.
+Cloudflare prüft ihn und stellt das SSL-Zertifikat aus; der Status steht noch auf `pending`.
+Die Domain `drwortwurzel.com` bleibt bei Namecheap; nur der CNAME `qr` kommt dazu.
 Portfolio (`drwortwurzel.com`, `www`) und E-Mail-Weiterleitung bleiben unberührt.
 
 1. Bei Namecheap: **Domain List** → `drwortwurzel.com` → **Manage** → **Advanced DNS**
@@ -100,9 +101,10 @@ Scans zählen will, braucht einen vorgeschalteten Kurzlink als Inhalt des QR-Cod
 
 ## Was nur du machen kannst
 
-Der CNAME bei Namecheap läuft in deinem Browser. Upload, Domain-Eintrag, Web Analytics und
-die Live-Prüfung sind erledigt; die Seite läuft unter `https://qr-werkstatt.pages.dev`,
-der Beacon ist aktiv. Sobald die eigene Adresse verbunden ist, prüfe ich sie.
+Der CNAME bei Namecheap ist gesetzt. Upload, Domain-Eintrag, Web Analytics und die
+Live-Prüfung sind erledigt; die Seite läuft unter `https://qr-werkstatt.pages.dev`, der
+Beacon ist aktiv. Sobald Cloudflare das Zertifikat ausgestellt hat, prüfe ich
+`https://qr.drwortwurzel.com`.
 
 Quellen (geprüft 2026-10-26):
 

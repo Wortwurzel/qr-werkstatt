@@ -4,10 +4,10 @@
 
 QR-Werkstatt is a static QR code generator. The QR processing runs entirely in the browser:
 contact (vCard), website, phone, WhatsApp, email and free text. There is no backend.
-The public version is live on Cloudflare Pages at https://qr-werkstatt.pages.dev; the
-custom domain https://qr.drwortwurzel.com still needs the CNAME at Namecheap (the portfolio
-stays on Netlify). It counts page views with Cloudflare Web Analytics (cookie-free,
-auto-injected by Pages). It is a private,
+The public version is live on Cloudflare Pages at https://qr-werkstatt.pages.dev. The
+custom domain https://qr.drwortwurzel.com has the CNAME at Namecheap; Cloudflare is
+issuing the certificate (the portfolio stays on Netlify). It counts page views with
+Cloudflare Web Analytics (cookie-free, auto-injected by Pages). It is a private,
 non-commercial site; there is no Impressum, only the privacy dialog in the footer.
 
 ## Structure
