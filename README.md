@@ -232,4 +232,7 @@ Kleine, klare Änderungen sind leichter zu prüfen als große Umbauten. Die Rege
 - [jsQR](https://github.com/cozmo/jsQR) und [Playwright](https://playwright.dev/) –
   die Werkzeuge hinter den automatisierten Prüfungen.
 
+And a huge special thanks to my wife for supporting me during the hard work I put into
+this project. ❤️
+
 <p align="center"><sub>QR-Werkstatt · Ein Code für alles, was du teilen willst.</sub></p>

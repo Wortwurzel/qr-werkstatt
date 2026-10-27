@@ -1,5 +1,9 @@
 # Fortschritt
 
+## Erledigt (2026-10-27)
+
+- README-Danksagung um eine persönliche Zeile ergänzt (Ehefrau, ❤️).
+
 ## Erledigt (2026-10-26)
 
 - Statische Seite „QR-Werkstatt“ gebaut: `src/app.html`, `build.mjs`, `dist/index.html`.
