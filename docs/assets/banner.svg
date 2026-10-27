@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="bannerTitle bannerDesc">
-  <title id="bannerTitle">QR-Werkstatt – Ein Code für alles, was du teilen willst.</title>
-  <desc id="bannerDesc">Dunkelgrüner Banner mit QR-Symbol, Produktname und dem Untertitel: Ein Code für alles, was du teilen willst.</desc>
+  <title id="bannerTitle">QR-Werkstatt – One code for everything you want to share.</title>
+  <desc id="bannerDesc">Dark green banner with a QR symbol, the product name and the subtitle: One code for everything you want to share.</desc>
   <defs>
     <pattern id="bannerDots" width="28" height="28" patternUnits="userSpaceOnUse">
       <circle cx="2" cy="2" r="1.1" fill="#3ddc97" opacity="0.13"/>
@@ -37,7 +37,7 @@
   </g>
 
   <text x="252" y="150" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="64" font-weight="800" fill="#eaf2ec" letter-spacing="-1.5">QR-Werkstatt</text>
-  <text x="254" y="200" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="26" fill="#a9c3b4">Ein Code für alles, was du teilen willst.</text>
+  <text x="254" y="200" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="26" fill="#a9c3b4">One code for everything you want to share.</text>
   <rect x="254" y="224" width="72" height="3" rx="1.5" fill="#3ddc97"/>
-  <text x="254" y="258" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" letter-spacing="3" fill="#3ddc97">BROWSER-ONLY · KEIN BACKEND · KEINE UPLOADS</text>
+  <text x="254" y="258" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" letter-spacing="3" fill="#3ddc97">BROWSER-ONLY · NO BACKEND · NO UPLOADS</text>
 </svg>

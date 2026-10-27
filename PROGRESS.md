@@ -4,6 +4,7 @@
 
 - README-Danksagung um eine persönliche Zeile ergänzt (Ehefrau, ❤️).
 - README komplett ins Englische übersetzt (GitHub-Startseite); Website bleibt deutsch.
+- README-Banner (`docs/assets/banner.svg`) ebenfalls englisch beschriftet.
 
 ## Erledigt (2026-10-26)
 
