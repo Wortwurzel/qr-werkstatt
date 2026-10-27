@@ -3,6 +3,7 @@
 ## Erledigt (2026-10-27)
 
 - README-Danksagung um eine persönliche Zeile ergänzt (Ehefrau, ❤️).
+- README komplett ins Englische übersetzt (GitHub-Startseite); Website bleibt deutsch.
 
 ## Erledigt (2026-10-26)
 

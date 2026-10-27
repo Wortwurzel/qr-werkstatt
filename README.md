@@ -1,76 +1,75 @@
 <p align="center">
-  <img src="docs/assets/banner.svg" alt="QR-Werkstatt – Ein Code für alles, was du teilen willst." width="100%">
+  <img src="docs/assets/banner.svg" alt="QR-Werkstatt – One code for everything you want to share." width="100%">
 </p>
 
 <h1 align="center">QR-Werkstatt</h1>
 
 <p align="center">
-  <strong>Ein Code für alles, was du teilen willst.</strong><br>
-  Kontakt, Website, Telefon, WhatsApp, E-Mail und freier Text – direkt im Browser,
-  ohne Anmeldung und ohne Upload.
+  <strong>One code for everything you want to share.</strong><br>
+  Contact, website, phone, WhatsApp, email and free text – directly in the browser,
+  no sign-up and no upload.
 </p>
 
 <p align="center">
-  <a href="https://qr.drwortwurzel.com"><img alt="Live-Demo" src="https://img.shields.io/badge/Live-qr.drwortwurzel.com-0b8a5b?style=flat-square"></a>
-  <img alt="Kein Backend" src="https://img.shields.io/badge/Backend-keins-0b8a5b?style=flat-square">
-  <img alt="37 Checks" src="https://img.shields.io/badge/Checks-37-0b8a5b?style=flat-square">
+  <a href="https://qr.drwortwurzel.com"><img alt="Live demo" src="https://img.shields.io/badge/Live-qr.drwortwurzel.com-0b8a5b?style=flat-square"></a>
+  <img alt="No backend" src="https://img.shields.io/badge/Backend-none-0b8a5b?style=flat-square">
+  <img alt="37 checks" src="https://img.shields.io/badge/Checks-37-0b8a5b?style=flat-square">
 </p>
 
 <p align="center">
-  <img src="docs/assets/screenshot-desktop.jpeg" alt="QR-Werkstatt: links das Formular, rechts die Live-Vorschau des QR-Codes" width="900">
+  <img src="docs/assets/screenshot-desktop.jpeg" alt="QR-Werkstatt: the form on the left, the live QR code preview on the right" width="900">
 </p>
 
-> **QR-Inhalte bleiben auf deinem Gerät.** Name, Logo, Website, Telefon, WhatsApp, E-Mail
-> und Texte werden nur in deinem Browser verarbeitet. Es gibt kein Benutzerkonto und keine
-> Formulardaten an einen Server.
+> **QR content stays on your device.** Name, logo, website, phone, WhatsApp, email and
+> text are processed only in your browser. There is no user account and no form data is
+> sent to a server.
 
 <details>
-<summary><strong>Inhalt</strong></summary>
+<summary><strong>Contents</strong></summary>
 
-- [Warum QR-Werkstatt?](#warum-qr-werkstatt)
-- [Funktionen](#funktionen)
-- [Schnellstart](#schnellstart)
-- [Benutzung](#benutzung)
-- [Inhaltstypen](#inhaltstypen)
+- [Why QR-Werkstatt?](#why-qr-werkstatt)
+- [Features](#features)
+- [Quick start](#quick-start)
+- [Usage](#usage)
+- [Content types](#content-types)
 - [Design](#design)
-- [Datenschutz](#datenschutz)
-- [Entwicklung](#entwicklung)
-- [Prüfen](#prüfen)
-- [Veröffentlichen](#veröffentlichen)
-- [Beitragen](#beitragen)
-- [Danksagung](#danksagung)
+- [Privacy](#privacy)
+- [Development](#development)
+- [Checks](#checks)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [Acknowledgments](#acknowledgments)
 
 </details>
 
-## Warum QR-Werkstatt?
+## Why QR-Werkstatt?
 
-QR-Codes sind schnell erstellt – aber selten schön, selten passend und oft mit einem
-Umweg über einen fremden Server verbunden. QR-Werkstatt macht daraus ein kleines
-Werkzeug: Inhalt wählen, gestalten, herunterladen. Alles im Browser, ohne Anmeldung,
-ohne Upload.
+QR codes are quick to create – but rarely beautiful, rarely fitting, and often tied to a
+detour through someone else's server. QR-Werkstatt turns that into a small tool: choose
+the content, style it, download it. All in the browser, no sign-up, no upload.
 
-Die Idee ist einfach: **Ein Code für alles, was du teilen willst.** Ob Kontaktkarte,
-Website, Telefonnummer, WhatsApp-Chat, E-Mail oder freier Text – du entscheidest, was
-im Code landet, und behältst die Gestaltung in der Hand.
+The idea is simple: **One code for everything you want to share.** Whether it is a
+contact card, a website, a phone number, a WhatsApp chat, an email or free text – you
+decide what goes into the code, and you keep control over its design.
 
-## Funktionen
+## Features
 
-| Funktion | Details |
+| Feature | Details |
 |---|---|
-| **Sechs Inhaltstypen** | vCard, Website, Telefon, WhatsApp, E-Mail und freier Text |
-| **Eine vCard für alles** | Name, Firma, Position, Telefon, E-Mail, Website und WhatsApp in einem Code |
-| **Logo in der Mitte** | PNG, JPG, WebP oder SVG bis 2 MB; Größe von 20 bis 40 % einstellbar |
-| **Design nach Geschmack** | Farben, Punkt- und Eckenstile, sechs Vorlagen, helles und dunkles Theme |
-| **Sauberer Export** | PNG und SVG mit 1024 px, direkt im Browser erzeugt |
-| **Scannbar bleiben** | Fehlerkorrektur Q ohne Logo, H mit Logo; Ruhezone mindestens vier Module; Kontrastwarnung |
-| **Eine Schrift** | Archivo für die ganze Seite – lokal ausgeliefert, keine Google-Fonts-Anfrage |
-| **Kein Backend** | Kein Konto, keine Datenbank, keine Formulardaten an einen Server |
-| **Geprüft** | 37 automatisierte Prüfungen mit Playwright und jsQR, lokal und live |
+| **Six content types** | vCard, website, phone, WhatsApp, email and free text |
+| **One vCard for everything** | Name, company, job title, phone, email, website and WhatsApp in a single code |
+| **Logo in the center** | PNG, JPG, WebP or SVG up to 2 MB; size adjustable from 20 to 40% |
+| **Design to taste** | Colors, dot and corner styles, six presets, light and dark theme |
+| **Clean export** | PNG and SVG at 1024 px, generated directly in the browser |
+| **Stays scannable** | Error correction Q without a logo, H with a logo; quiet zone of at least four modules; contrast warning |
+| **One typeface** | Archivo for the whole page – served locally, no Google Fonts request |
+| **No backend** | No account, no database, no form data sent to a server |
+| **Tested** | 37 automated checks with Playwright and jsQR, locally and live |
 
-## Schnellstart
+## Quick start
 
-Voraussetzungen: [Node.js](https://nodejs.org/) in der aktuellen LTS-Version und npm.
-Es wird kein Server gestartet.
+Requirements: [Node.js](https://nodejs.org/) in the current LTS version and npm.
+No server is started.
 
 ```bash
 git clone https://github.com/Wortwurzel/qr-werkstatt.git
@@ -80,159 +79,158 @@ npm run check
 npm run build
 ```
 
-Danach `dist/index.html` im Browser öffnen.
+Then open `dist/index.html` in your browser.
 
-> **Nur ausprobieren?** Die öffentliche Version läuft unter
-> [qr.drwortwurzel.com](https://qr.drwortwurzel.com). Die Cloudflare-Adresse
-> `qr-werkstatt.pages.dev` bleibt als Fallback erreichbar.
+> **Just want to try it?** The public version runs at
+> [qr.drwortwurzel.com](https://qr.drwortwurzel.com). The Cloudflare address
+> `qr-werkstatt.pages.dev` remains available as a fallback.
 
-## Benutzung
+## Usage
 
-1. **Inhalt wählen** – Kontakt, Website, Telefon, WhatsApp, E-Mail oder Text.
-2. **Felder füllen** – leere Felder bleiben draußen; bei der vCard werden nur die
-   Angaben übernommen, die du einträgst.
-3. **Gestalten** – Logo, Farben, Punkt- und Eckenstil, Größe. Die Vorschau aktualisiert
-   sich sofort.
-4. **Herunterladen** – als PNG für Chat und Alltag oder als SVG für Druck und
-   Weiterverarbeitung.
+1. **Choose the content** – contact, website, phone, WhatsApp, email or text.
+2. **Fill in the fields** – empty fields are left out; for the vCard, only the details
+   you enter are included.
+3. **Style it** – logo, colors, dot and corner style, size. The preview updates
+   immediately.
+4. **Download** – as PNG for chats and everyday use, or as SVG for print and further
+   processing.
 
-Die Vorschau warnt, wenn der Kontrast zu niedrig ist oder ein helles Muster auf dunklem
-Grund schwer zu scannen ist.
+The preview warns when the contrast is too low or when a light pattern on a dark
+background is hard to scan.
 
-> In einer eingebetteten Vorschau (Artifact) kann der Browser Downloads blockieren.
-> Die veröffentlichte Seite lädt PNG und SVG normal herunter.
+> In an embedded preview (Artifact), the browser may block downloads. The published site
+> downloads PNG and SVG normally.
 
-## Inhaltstypen
+## Content types
 
-| Typ | Inhalt im QR-Code | Beispiel |
+| Type | Content in the QR code | Example |
 |---|---|---|
-| **Kontakt** | vCard 3.0 mit Name, Firma, Position, Telefon, E-Mail, Website und WhatsApp | `BEGIN:VCARD …` |
-| **Website** | vollständige URL; `https://` wird bei Bedarf ergänzt | `https://example.org` |
-| **Telefon** | `tel:`-Link mit normalisierter Nummer | `tel:+4917612345678` |
-| **WhatsApp** | `wa.me`-Link, optional mit vorausgefüllter Nachricht | `https://wa.me/4917612345678?text=Hallo` |
-| **E-Mail** | `mailto:`-Link, optional mit Betreff | `mailto:hallo@example.org` |
-| **Text** | freier Text bis 1.273 Byte | `Treffpunkt: 18:30` |
+| **Contact** | vCard 3.0 with name, company, job title, phone, email, website and WhatsApp | `BEGIN:VCARD …` |
+| **Website** | full URL; `https://` is added when needed | `https://example.org` |
+| **Phone** | `tel:` link with a normalized number | `tel:+4917612345678` |
+| **WhatsApp** | `wa.me` link, optionally with a pre-filled message | `https://wa.me/4917612345678?text=Hello` |
+| **Email** | `mailto:` link, optionally with a subject | `mailto:hello@example.org` |
+| **Text** | free text up to 1,273 bytes | `Meeting point: 18:30` |
 
 ## Design
 
-Die Gestaltung ist kein Zufall: QR-Codes müssen auch nach dem Styling zuverlässig
-scannbar bleiben.
+The design is not arbitrary: QR codes must remain reliably scannable even after styling.
 
-- **Fehlerkorrektur:** Q ohne Logo, H mit Logo. Je mehr Logo, desto mehr Redundanz.
-- **Ruhezone:** mindestens vier Module ringsum, dynamisch aus der Modulzahl berechnet.
-- **Kontrast:** Die Vorschau warnt bei zu wenig Kontrast oder hellem Muster auf dunklem Grund.
-- **Eine Schrift:** Archivo trägt die ganze Seite – Überschrift, Formular, Labels und
-  Zahlen. Keine zweite Schrift, keine Google-Fonts-Anfrage.
-- **PNG und SVG:** PNG für Chat und Alltag, SVG für Druck und Weiterverarbeitung.
-- **Beide Themes:** Die Seite folgt dem System und lässt sich hell oder dunkel umschalten.
+- **Error correction:** Q without a logo, H with a logo. The more logo, the more redundancy.
+- **Quiet zone:** at least four modules on all sides, calculated dynamically from the module count.
+- **Contrast:** The preview warns about too little contrast or a light pattern on a dark background.
+- **One typeface:** Archivo carries the whole page – heading, form, labels and numbers.
+  No second typeface, no Google Fonts request.
+- **PNG and SVG:** PNG for chats and everyday use, SVG for print and further processing.
+- **Both themes:** The page follows the system setting and can be switched between light and dark.
 
 <p align="center">
   <a href="docs/assets/screenshot-mobile-phone.png">
-    <img src="docs/assets/screenshot-mobile-phone.png" alt="QR-Werkstatt auf einem Smartphone in der Hand; die Seite zeigt die Live-Vorschau eines QR-Codes">
+    <img src="docs/assets/screenshot-mobile-phone.png" alt="QR-Werkstatt on a smartphone held in a hand; the page shows the live preview of a QR code">
   </a>
 </p>
 
-## Datenschutz
+## Privacy
 
-- **QR-Inhalte bleiben im Browser.** Name, Logo, Website, Telefon, WhatsApp, E-Mail und
-  Texte werden nicht an einen Server geschickt.
-- **Kein Konto, keine Formulare an einen Server.** Es gibt nichts zu speichern und
-  nichts zu synchronisieren.
-- **Lokale Speicherung:** Nur das Farbschema und Design-Einstellungen liegen im
-  `localStorage`. QR-Inhalte und das Logo werden nicht gespeichert.
-- **Besucherstatistik:** Die öffentliche Version zählt Seitenaufrufe mit Cloudflare Web
-  Analytics – cookie-frei, ohne Nutzerprofile. Gezählt werden Besuche der Website, nicht
-  Scans der erzeugten QR-Codes. Werbe- und Tracking-Blocker können die Zahl verkleinern.
-- **Schriften lokal:** Archivo liegt im Repository und wird direkt von der Seite geladen;
-  es gibt keine Anfrage an Google Fonts.
+- **QR content stays in the browser.** Name, logo, website, phone, WhatsApp, email and
+  text are not sent to a server.
+- **No account, no forms sent to a server.** There is nothing to save and nothing to
+  synchronize.
+- **Local storage:** Only the color scheme and design settings are stored in
+  `localStorage`. QR content and the logo are not saved.
+- **Visitor analytics:** The public version counts page views with Cloudflare Web
+  Analytics – cookie-free, without user profiles. It counts visits to the website, not
+  scans of the generated QR codes. Ad and tracking blockers can reduce the number.
+- **Local fonts:** Archivo is part of the repository and is loaded directly by the page;
+  there is no request to Google Fonts.
 
-Die vollständige Datenschutzerklärung steht in der Fußzeile der Seite. Ein Impressum ist
-nicht nötig, weil die Seite privat und nicht gewerblich ist.
+The full privacy notice is in the page footer. An Impressum is not required because the
+site is private and non-commercial.
 
-## Entwicklung
+## Development
 
-Die gebaute Seite ist eine einzige statische HTML-Datei mit CSS und JavaScript. Die App
-braucht keinen Bundler; `build.mjs` verpackt die Quelle und kopiert Bibliothek und Schrift.
+The built page is a single static HTML file with CSS and JavaScript. The app needs no
+bundler; `build.mjs` wraps the source and copies the library and the font.
 
-| Datei | Zweck |
+| File | Purpose |
 |---|---|
-| `src/app.html` | Einzige Quelle: Layout, Stil, Logik und Datenschutz-Dialog |
-| `build.mjs` | Baut `dist/index.html`, kopiert die Bibliothek und die Schrift |
-| `vendor/qr-code-styling.js` | `qr-code-styling@1.9.2`, vendort und nicht bearbeitet |
-| `vendor/fonts/` | Archivo als lokale WOFF2-Datei; Quelle und Prüfsumme in `SOURCE.md` |
-| `check.mjs` | Ende-zu-Ende-Prüfung mit Playwright und jsQR |
-| `AGENTS.md` | Projektregeln für Menschen und Agenten |
-| `DEPLOY.md` | Cloudflare Pages und Besucherstatistik |
-| `PLAN.md` / `PROGRESS.md` | Plan, Entscheidungen und Arbeitsstand |
+| `src/app.html` | Single source: layout, style, logic and privacy dialog |
+| `build.mjs` | Builds `dist/index.html`, copies the library and the font |
+| `vendor/qr-code-styling.js` | `qr-code-styling@1.9.2`, vendored and not edited |
+| `vendor/fonts/` | Archivo as a local WOFF2 file; source and checksum in `SOURCE.md` |
+| `check.mjs` | End-to-end checks with Playwright and jsQR |
+| `AGENTS.md` | Project rules for humans and agents |
+| `DEPLOY.md` | Cloudflare Pages and visitor analytics |
+| `PLAN.md` / `PROGRESS.md` | Plan, decisions and current state |
 
-Die Quelle ist ein Artifact-Fragment (ohne `<!doctype>`, `<html>`, `<head>` oder `<body>`);
-`build.mjs` ergänzt doctype, head und Meta. `dist/` wird nie von Hand bearbeitet.
+The source is an Artifact fragment (without `<!doctype>`, `<html>`, `<head>` or `<body>`);
+`build.mjs` adds the doctype, head and meta tags. `dist/` is never edited by hand.
 
-Wichtige Regeln:
+Important rules:
 
-- `src/app.html` ist die einzige Quelle. Nach Änderungen `npm run build` ausführen.
-- Eine Schrift: Archivo. Keine zweite Schrift, keine externen Fonts.
-- QR-Inhalte verlassen den Browser nicht; keine Formulardaten an einen Server.
-- `localStorage` nur für Theme und Design, nie für Formularinhalte.
-- Die Seite muss bei 390 px Breite ohne horizontales Scrollen funktionieren.
-- `qr-code-styling` kodiert jedes Zeichen mit `charCodeAt & 0xFF`. Nicht-ASCII-Inhalte
-  laufen deshalb durch `encodeQrData()`, das der Bibliothek die UTF-8-Bytes als
-  Latin-1-Zeichenkette übergibt. Diese Funktion bleibt.
-- vCard-Ausgabe nutzt CRLF, vCard-Escaping und bytegenaue 75-Oktett-Faltung. Das bleibt.
-- Die Ruhezone bleibt bei mindestens vier Modulen; `quietZoneMargin()` berechnet sie.
+- `src/app.html` is the only source. Run `npm run build` after changes.
+- One typeface: Archivo. No second typeface, no external fonts.
+- QR content does not leave the browser; no form data is sent to a server.
+- `localStorage` is only for theme and design, never for form content.
+- The page must work at 390 px width without horizontal scrolling.
+- `qr-code-styling` encodes each character with `charCodeAt & 0xFF`. Non-ASCII content
+  therefore goes through `encodeQrData()`, which hands the library the UTF-8 bytes as a
+  Latin-1 string. That function stays.
+- vCard output uses CRLF, vCard escaping and byte-accurate 75-octet folding. That stays.
+- The quiet zone stays at least four modules; `quietZoneMargin()` calculates it.
 
-## Prüfen
+## Checks
 
 ```bash
 npm ci
 npm run check
 ```
 
-Erwartet: `CHECK OK: 37 Prüfungen`. Der Check öffnet die Seite in Playwright, füllt jeden
-Inhaltstyp aus, rastert den erzeugten QR-Code und dekodiert ihn mit jsQR. Er prüft
-außerdem Downloads, Logo, Themes, die lokale Schrift, die Datenschutz-Angaben und die
-Darstellung bei 390 px. Das vollständige Protokoll steht in `check.log`.
+Expected: `CHECK OK: 37 Prüfungen`. The check opens the page in Playwright, fills in every
+content type, rasterizes the generated QR code and decodes it with jsQR. It also checks
+downloads, the logo, themes, the local font, the privacy details and the layout at 390 px.
+The full log is in `check.log`.
 
-Die veröffentlichte Seite prüfen:
+Check the published page:
 
 ```powershell
 $env:CHECK_TARGET = "https://qr.drwortwurzel.com"; npm run check
 ```
 
-Gegen eine absichtlich kaputte Kopie muss der Check mit Exit 1 enden:
-`CHECK_TARGET=<pfad> node check.mjs`.
+Against a deliberately broken copy, the check must exit with 1:
+`CHECK_TARGET=<path> node check.mjs`.
 
-## Veröffentlichen
+## Deployment
 
-Die Seite läuft auf **Cloudflare Pages** und wird per Direct Upload veröffentlicht. Die
-Schritte stehen in [`DEPLOY.md`](DEPLOY.md). Die Hauptadresse ist
-[`qr.drwortwurzel.com`](https://qr.drwortwurzel.com); `qr-werkstatt.pages.dev` bleibt als
-Fallback. Die Besucherstatistik läuft über eine eigene Cloudflare-Web-Analytics-Site für
-die eigene Domain. Der Beacon wird beim Build aus `CF_WEB_ANALYTICS_TOKEN` in `.env`
-eingebaut; die Datei ist gitignored. `npm run check` baut bewusst ohne Beacon, damit der
-lokale Test keine CORS-Fehler von `file://` sieht – vor dem Upload also `npm run build`
-ausführen.
+The page runs on **Cloudflare Pages** and is published via Direct Upload. The steps are in
+[`DEPLOY.md`](DEPLOY.md). The main address is
+[`qr.drwortwurzel.com`](https://qr.drwortwurzel.com); `qr-werkstatt.pages.dev` remains as a
+fallback. Visitor analytics runs through a dedicated Cloudflare Web Analytics site for the
+custom domain. The beacon is added at build time from `CF_WEB_ANALYTICS_TOKEN` in `.env`;
+the file is gitignored. `npm run check` deliberately builds without the beacon so the
+local test does not see CORS errors from `file://` – so run `npm run build` before
+uploading.
 
-## Beitragen
+## Contributing
 
-Issues und Pull Requests sind willkommen. Bitte vor einem PR:
+Issues and pull requests are welcome. Please do the following before a PR:
 
 1. `npm ci`
 2. `npm run check`
-3. Die Seite bei 390 px Breite und in beiden Themes ansehen.
+3. Look at the page at 390 px width and in both themes.
 
-Kleine, klare Änderungen sind leichter zu prüfen als große Umbauten. Die Regeln aus
-[`AGENTS.md`](AGENTS.md) gelten auch für Beiträge.
+Small, clear changes are easier to review than large rewrites. The rules in
+[`AGENTS.md`](AGENTS.md) also apply to contributions.
 
-## Danksagung
+## Acknowledgments
 
-- [qr-code-styling](https://github.com/kozakdenys/qr-code-styling) von Denys Kozak –
-  die QR-Engine mit Logo, Formen und Export.
-- [Archivo](https://fonts.google.com/specimen/Archivo) – die eine Schrift der Seite.
-- [jsQR](https://github.com/cozmo/jsQR) und [Playwright](https://playwright.dev/) –
-  die Werkzeuge hinter den automatisierten Prüfungen.
+- [qr-code-styling](https://github.com/kozakdenys/qr-code-styling) by Denys Kozak –
+  the QR engine with logo, shapes and export.
+- [Archivo](https://fonts.google.com/specimen/Archivo) – the page's one typeface.
+- [jsQR](https://github.com/cozmo/jsQR) and [Playwright](https://playwright.dev/) –
+  the tools behind the automated checks.
 
 And a huge special thanks to my wife for supporting me during the hard work I put into
 this project. ❤️
 
-<p align="center"><sub>QR-Werkstatt · Ein Code für alles, was du teilen willst.</sub></p>
+<p align="center"><sub>QR-Werkstatt · One code for everything you want to share.</sub></p>
