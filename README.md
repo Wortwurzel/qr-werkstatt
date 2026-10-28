@@ -234,3 +234,5 @@ And a huge special thanks to my wife for supporting me during the hard work I pu
 this project. ❤️
 
 <p align="center"><sub>QR-Werkstatt · One code for everything you want to share.</sub></p>
+
+<sub>QR Code is a registered trademark of DENSO WAVE INCORPORATED.</sub>
