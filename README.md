@@ -233,6 +233,8 @@ Small, clear changes are easier to review than large rewrites. The rules in
 And a huge special thanks to my wife for supporting me during the hard work I put into
 this project. ❤️
 
-<p align="center"><sub>QR-Werkstatt · One code for everything you want to share.</sub></p>
+## License
 
-<sub>QR Code is a registered trademark of DENSO WAVE INCORPORATED.</sub>
+QR Code ist eine eingetragene Marke von DENSO WAVE INCORPORATED.
+
+<p align="center"><sub>QR-Werkstatt · One code for everything you want to share.</sub></p>
