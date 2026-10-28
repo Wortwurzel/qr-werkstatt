@@ -2,9 +2,9 @@
 
 ## Erledigt (2026-10-28)
 
-- Markenhinweis ergänzt: „QR Code ist eine eingetragene Marke von DENSO WAVE
-  INCORPORATED.“ im Website-Footer (`src/app.html`) und in einer eigenen Sektion
-  `## License` unter den Acknowledgments der README.
+- Markenhinweis ergänzt: im Website-Footer (`src/app.html`) deutsch („QR Code ist eine
+  eingetragene Marke von DENSO WAVE INCORPORATED.“), in der README englisch in einer
+  eigenen Sektion `## License` unter den Acknowledgments.
 
 ## Erledigt (2026-10-27)
 

@@ -235,6 +235,6 @@ this project. ❤️
 
 ## License
 
-QR Code ist eine eingetragene Marke von DENSO WAVE INCORPORATED.
+QR Code is a registered trademark of DENSO WAVE INCORPORATED.
 
 <p align="center"><sub>QR-Werkstatt · One code for everything you want to share.</sub></p>
